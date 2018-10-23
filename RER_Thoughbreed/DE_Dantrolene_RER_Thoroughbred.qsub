@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=03:00:00
+#SBATCH --mem=10G
+#SBATCH -J DE_Dantrolene_RER_Thoroughbred
+#SBATCH -o DE_Dantrolene_RER_Thoroughbred.o%j
+
+#=====================================================================
+# This script runs: DE_Dantrolene_RER_Thoroughbred.R
+# Submited on: Tue Oct 23 12:33:34 EDT 2018
+#=====================================================================
+
+# Work Directory
+cd /mnt/research/NMDL/KER_Glycogen_and_RER_Thoroughbred/RNA_Seq/DE/DE_Dantrolene_RER_Thoroughbred
+
+# Run R Code
+R -e 'library("knitr");knitr::spin ("DE_Dantrolene_RER_Thoroughbred.R")'
+
+# Add metadata to md file
+cat .metadata DE_Dantrolene_RER_Thoroughbred.md > tmp; mv tmp DE_Dantrolene_RER_Thoroughbred.md
+
+# Render HTML
+R -e 'library("prettydoc");rmarkdown::render ("DE_Dantrolene_RER_Thoroughbred.md")'
+
+# Job Details
+echo Job Details
+scontrol show job $SLURM_JOB_ID
