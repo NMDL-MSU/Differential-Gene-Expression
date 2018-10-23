@@ -10,6 +10,5 @@ involved in intramuscular Ca2+ regulation compared to fillies that are not susce
 ### Differential Gene Expression Analysis
 Determined differentially expressed genes among 15 RER and 8 control fillies.  
 
-The scripts used to run this analysis can be viewed in detail 
-<a href="https://htmlpreview.github.io/?https://github.com/NMDL-MSU/Power/blob/master/Power.html" target="_blank">here</a> analysis can be seen in detaile here.
+The scripts used to run this analysis can be viewed in detail <a href="https://htmlpreview.github.io/?https://github.com/NMDL-MSU/Differential-Gene-Expression-RER_Thoughbred/blob/master/DE_RER_Thoroughbred.html" target="_blank">here</a> analysis can be seen in detaile here.
 
