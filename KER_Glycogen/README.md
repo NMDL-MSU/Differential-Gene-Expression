@@ -21,7 +21,7 @@ Determined differentially expressed genes were identified for the following comp
 * Between timepoints per diet over time  
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;DE Analysis:
-The scripts used to run the DE analysis can be viewed in detail <a href="https://htmlpreview.github.io/?https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/RER_Thoughbreed/DE_RER_Thoroughbred.html" target="_blank">here</a>.
+The scripts used to run the DE analysis can be viewed in detail [here](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/DE_KER_Glycogen.md)
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;DE Results:
 The DE results for all comparisons can be downloaded [here](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/Results_DE_Analysis_KER_Glycogen.xlsx?raw=true)
