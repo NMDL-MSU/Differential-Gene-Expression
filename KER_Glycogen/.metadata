@@ -1,0 +1,10 @@
+---
+title: Differential Gene Expression Analysis
+author: Deborah Velez-Irizarry
+date: Thu Oct 25 09:08:17 EDT 2018
+output:
+  prettydoc::html_pretty:
+    theme: tactile
+    highlight: github
+    toc: true
+---
