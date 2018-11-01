@@ -41,4 +41,4 @@ The enriched pathways can be downloaded using the following links:
 * [Pathways for genes differentially expressed between diet over time](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/Pathway_Analysis/Enrichment_KER_Glycogen_Diet/KER_Glycogen_GO-Kegg_Results_Diet.xlsx?raw=true)
 * Pathways for genes differentially expressed in each diet over time:
   * [Pre-depletion time point as reference](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/Pathway_Analysis/Enrichment_KER_Glycogen_PreDepl/KER_Glycogen_GO-Kegg_Results_Timepoint_Pre-Depletion_Ref.xlsx?raw=true)
-  * [Depletion time point as reference]()
+  * [Depletion time point as reference](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/Pathway_Analysis/Enrichment_KER_Glycogen_Depl/KER_Glycogen_GO-Kegg_Results_Timepoint_Depletion_Ref.xlsx?raw=true)
