@@ -23,8 +23,5 @@ Determined differentially expressed genes were identified for the following comp
 #### &nbsp;&nbsp;&nbsp;&nbsp;DE Analysis:
 The scripts used to run the DE analysis can be viewed in detail [here](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/DE_KER_Glycogen.md)
 
-The pretty html document of the DE analysis is not supported by github due to file size. To view this document you can download
-the [html](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/DE_KER_Glycogen.html) and open in your browser.
-
 #### &nbsp;&nbsp;&nbsp;&nbsp;DE Results:
 The DE results for all comparisons can be downloaded [here](https://github.com/NMDL-MSU/Differential-Gene-Expression/blob/master/KER_Glycogen/Results_DE_Analysis_KER_Glycogen.xlsx?raw=true)
