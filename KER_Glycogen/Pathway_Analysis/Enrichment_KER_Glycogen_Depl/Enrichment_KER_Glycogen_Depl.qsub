@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=03:00:00
+#SBATCH --mem=50G
+#SBATCH -J Enrichment_KER_Glycogen_Depl
+#SBATCH -o Enrichment_KER_Glycogen_Depl.o%j
+
+#=====================================================================
+# This script runs: Enrichment_KER_Glycogen_Depl.R
+# Submited on: Tue Oct 30 15:35:58 EDT 2018
+#=====================================================================
+
+# Work Directory
+cd /mnt/research/NMDL/KER_Glycogen_and_RER_Thoroughbred/RNA_Seq/Enrichment/Enrichment_KER_Glycogen_Depl
+
+# Load Modules
+module load GCC/5.4.0-2.26
+module load OpenMPI/1.10.3
+module load R/3.3.1
+
+# Run R Code
+R -e 'library("knitr");knitr::spin ("Enrichment_KER_Glycogen_Depl.R")'
+
+# Add metadata to md file
+cat .metadata Enrichment_KER_Glycogen_Depl.md > tmp; mv tmp Enrichment_KER_Glycogen_Depl.md
+
+# Render HTML
+R -e 'library("prettydoc");rmarkdown::render ("Enrichment_KER_Glycogen_Depl.md")'
+
+# Job Details
+echo Job Details
+scontrol show job $SLURM_JOB_ID
