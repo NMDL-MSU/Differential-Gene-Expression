@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=03:00:00
+#SBATCH --mem=10G
+#SBATCH -C intel18
+#SBATCH -J DE_RER_Thoroughbred_Protein_Subset
+#SBATCH -o DE_RER_Thoroughbred_Protein_Subset.o%j
+
+#=====================================================================
+# This script runs: DE_RER_Thoroughbred_Protein_Subset.R
+# Submited on: Wed Dec 5 16:38:29 EST 2018
+#=====================================================================
+
+# Work Directory
+cd /mnt/research/NMDL/KER_Glycogen_and_RER_Thoroughbred/RNA_Seq/DE/DE_KER_Glycogen/DE_RER_Thoroughbred_Protein_Subset
+
+# Run R Code
+R -e 'library("knitr");knitr::spin ("DE_RER_Thoroughbred_Protein_Subset.R")'
+
+# Add metadata to md file
+cat .metadata DE_RER_Thoroughbred_Protein_Subset.md > tmp; mv tmp DE_RER_Thoroughbred_Protein_Subset.md
+
+# Render HTML
+R -e 'library("prettydoc");rmarkdown::render ("DE_RER_Thoroughbred_Protein_Subset.md")'
+
+# Job Details
+echo Job Details
+scontrol show job $SLURM_JOB_ID
