@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=03:00:00
+#SBATCH --mem=50G
+#SBATCH -C intel18
+#SBATCH -J Enrichment_RER_Thoroughbred
+#SBATCH -o Enrichment_RER_Thoroughbred.o%j
+
+#=====================================================================
+# This script runs: Enrichment_RER_Thoroughbred.R
+# Submited on: Tue Dec 11 11:39:17 EST 2018
+#=====================================================================
+
+# Work Directory
+cd /mnt/research/NMDL/KER_Glycogen_and_RER_Thoroughbred/RNA_Seq/Enrichment/Enrichment_RER_Thoroughbred
+
+# Run R Code
+R -e 'library("knitr");knitr::spin ("Enrichment_RER_Thoroughbred.R")'
+
+# Add metadata to md file
+cat .metadata Enrichment_RER_Thoroughbred.md > tmp; mv tmp Enrichment_RER_Thoroughbred.md
+
+# Render HTML
+R -e 'library("prettydoc");rmarkdown::render ("Enrichment_RER_Thoroughbred.md")'
+
+# Job Details
+echo Job Details
+scontrol show job $SLURM_JOB_ID
